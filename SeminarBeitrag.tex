@@ -1,0 +1,133 @@
+% !TEX encoding = UTF-8 Unicode
+
+% Beispiel für ein LaTeX-Dokument im Format "seminarvorlage"
+\documentclass[ngerman]{seminarbeitrag}
+% ngerman = Deutsch in neuer Rechtschreibung
+% english = Englisch
+
+\usepackage[utf8]{inputenc} % Kodierung der Non-ASCII-Zeichen
+
+\begin{document}
+
+% Unbedingt notwendig: Titel, Autoren
+\title{Ein intelligentes öffentliches Transportsystem basierend auf IoT}
+\author{Luca Bernstein\and\ Mathis Neunzig}
+
+\maketitle% Titelangaben produzieren, kein Inhaltsverzeichnis
+
+\begin{abstract}
+Gummibärchen (auch Gummibären bzw. Goldbären) sind Fruchtgummis in Form von etwa
+zwei Zentimeter großen, stilisierten Bären. Sie werden in unterschiedlichen Farben hergestellt
+und bestehen im Wesentlichen aus Zucker, Zuckersirup und einer erstarrten
+Gelatine-Mischung, die ihnen ihre gummiartige Konsistenz verleiht.
+
+\keywords{Süßigkeiten, Gelatine, Bär, Lebensmittelfarbe.}% Keywords innerhalb vom Abstract
+\end{abstract}
+
+% Section-Überschriften werden automatisch in GROSSBUCHSTABEN gesetzt
+\section{Einleitung}\label{einleitung}
+
+Die Geschichte der Gummi\-bär\-chen ist voller                       % \- Trennhilfe 
+Über\-raschun\-gen. Schon 1922 wurden diese Tierchen erstmals\ldots\ % \ldots macht ...
+Siehe insbesondere die Standardwerke von Jung und Alt~\cite{ACM2019,Ivory2001}.
+
+Zwei Jahre nach der Firmengründung erfand
+Hans Riegel den Vorläufer der Goldbären, damals noch „Tanz\-bären“ genannt.
+Diese waren allerdings nicht nur größer als die heutigen Gummibärchen,
+sondern auch weicher, da zu seiner Herstellung statt der heute üblichen
+Gelatine noch \emph{Gummi arabicum} verwendet wurde.
+Inzwischen werden Gummibären in vielen Variationen von anderen Herstellern angeboten~\cite{gummi}.
+
+1925 begann Haribo mit der Herstellung von Lakritz\-produkten.
+Anfang der 1930er Jahre entstanden die Vertriebsorganisation in Deutschland
+und der Hauptbau der neuen Fabrikationsanlage. 1935 wurde in Kopenhagen\ldots
+
+% Jede Section am besten mit einem Kommentar hier im Quelltext markieren
+\section{Und Erwachsene ebenso?}
+
+Das ist die Frage, die seit dem
+21.~Jahrhundert aufgeworfen wurde~\cite[S.~237f]{Ivory2001}.
+
+\subsection{Konsumentenalter}\label{alt}
+Meist wurde implizit angenommen, dass Kinder die Hauptzielgruppe sind.
+Diese Auffassung lässt sich allerdings nicht mehr aufrecht halten~\cite{Black1988}.
+
+\subsection{Varianten}\label{var}
+Weitere Varianten sind Gummibären auf Fruchtsaftbasis (mit dem Zusatz „Frucht“ deklariert), die Haribo 2009 auf den Markt brachte. Fruchtsaft wird bereits seit 1989 auch zum Färben verwendet.
+In \cref{niko} sehen wir ein Beispiel.
+
+\begin{figure}
+\begin{center}
+\unitlength8mm % hier skalieren, falls gewünscht
+\begin{picture}(4,6)
+%außen
+\put(0,0){\line(1,0){4}}
+\put(4,0){\line(0,1){4}}
+\put(4,4){\line(-1,1){2}}
+\put(2,6){\line(-1,-1){2}}
+\put(0,4){\line(0,-1){4}}
+%innen
+\put(0,0){\line(1,1){4}}
+\put(4,4){\line(-1,0){4}}
+\put(0,4){\line(1,-1){4}}
+\end{picture}
+\end{center}
+\caption{Das Haus des Nikolaus als Graph in seiner ersten, ursprünglichen Form,
+         siehe auch~\protect\cite[S.~93]{Ivory2001}. Erwähnenswert ist insbesondere,
+         dass die Figur gezeichnet werden kann, ohne den Stift abzusetzen, wenn man an
+         der richtigen Stelle (wo?) beginnt.}
+\label{niko}
+\end{figure}
+
+% Eine neue Seite anfangen mit
+%\pagebreak
+
+In \cref{tttabelle} ist das Ganze tabellarisch dargestellt.
+
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Material & Tierart & essbar\\
+\hline
+Gummi & Bär & ja\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Eine Übersicht zu den Fachbegriffen.}
+\label{tttabelle}
+\end{table}
+
+% und schon der letzte Abschnitt
+\section{Zusammenfassung}
+
+In dieser Abhandlung wurde die Geschichte neu interpretiert.
+Es ergaben sich völlig neuartige Forschungsansätze, dargestellt in \cref{alt} und~\ref{var},
+die so vielfältig sind, dass sich die Auswirkungen gegen\-wärtig %Trennhilfe \-
+kaum abschätzen lassen. Auch Artikel mit vielen Autoren~\cite{Black1988}
+befassen sich mit diesem Thema.
+
+
+% Bibliographie entweder direkt hier eingeben (nur im Notfall)...
+%\begin{thebibliography}{9}
+%\bibitem{ACM2019}
+%ACM.
+%\newblock How to classify works using ACM's computing classification system.
+%\newblock \url{http://www.acm.org/class/how_to_use.html}.
+%
+%\bibitem{Ivory2001}
+%M.~Y. Ivory and M.~A. Hearst.
+%\newblock The state of the art in automating usability evaluation of user
+%  interfaces.
+%\newblock {\em ACM Comput. Surv.}, 33(4):470--516, 2001.
+%
+%\end{thebibliography}
+
+% ... oder die Bibliographie mit Hilfe von BibTeX generieren,
+% dies ist auf jeden Fall die bessere Lösung und sollte nach
+% Möglichkeit immer verwendet werden:
+\bibliographystyle{abbrv}
+\bibliography{literatur} % Daten aus der Datei literatur.bib verwenden.
+
+\end{document}
