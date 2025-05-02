@@ -12,6 +12,12 @@
 
 \maketitle % Titelangaben produzieren, kein Inhaltsverzeichnis
 
+% --- ONLY FOR DISPLAY PURPOSES ---
+\setcounter{tocdepth}{2}
+\tableofcontents{}
+\newpage
+% ---------------------------------
+
 % TODO: Abstract mit neuem Inhalt wieder einführen:
 \begin{abstract}
 TODO werden verschiedene Ansätze zur Optimierung öffentlicher Transportsysteme mithilfe von IoT beleuchtet.
@@ -19,108 +25,76 @@ TODO werden verschiedene Ansätze zur Optimierung öffentlicher Transportsysteme
 \keywords{TODO, IoT.}% Keywords innerhalb vom Abstract
 \end{abstract}
 
-% ---------------
+%=================================================================================
+\pagebreak
 \section{Einleitung}
-% Begründung, Ziel, Abgrenzung des Themas.
-\subsection{Problem-/Fragestellung}
-\subsection{Themenüberblick}
+\subsection{Motivation}
+\subsubsection{Urbanisierung}
+\subsubsection{Verkehrsprobleme}
+\subsubsection{Umwelt}
+\subsection{Zielsetzung}
+\subsection{Struktur der Arbeit}
+
+%=================================================================================
+\pagebreak
 \section{Grundlagen}
-\subsection{Definitionen, Begriffe und Konzepte}
-\section{Architektur und Technologien öffentlicher Verkehrssysteme}
+\subsection{Begriffserklärungen}
+\subsubsection{Internet of Things (Gubbi et al)}
+\subsubsection{Intelligent Transportation Systems (ITS) (Elkosantini et al)}
+\subsubsection{Intelligent Public Transportation Systems (IPTS) (Elkosantini et al)}
+\subsection{Architekturen}
+\subsubsection{Sensorik}
+\subsubsection{Kommunikation}
+\subsubsection{Cloud-Integration}
+\subsubsection{3-Layer-Architektur (Luo et al.)}
+
+%=================================================================================
+\pagebreak
+\section{Architektur und Technologien intelligenter öffentlicher Verkehrssysteme}
+\subsection{Erfassung und Analyse von Echtzeitdaten}
+\subsubsection{Fahrzeug-Tracking (GPS, AVLS)} 
+\subsubsection{Fahrgastzählung (APC, z.B. Infrarot-Technologie bei Li, Systeme wie SUICA, PASMO, Oyster, etc.)}
+\subsection{Kommunikationstechnologien}
+\subsubsection{Mobilfunk (LTE, GPRS)}
+\subsubsection{WLAN}
+\subsubsection{RFID}
+\subsection{Entscheidungsunterstützung}
+\subsubsection{Decision Support Systems (DSS) für Disposition und Fahrplanoptimierung}
+
+%=================================================================================
+\pagebreak
 \section{Ansätze zur Effizienz- und Effektivitätssteigerung}
-\subsubsection{Dynamische Steuerung und Anpassungen des Verkehrsbetriebs}
-\subsubsection{Mathematisches Modell zur Betriebsoptimierung}
-\section{Ansätze zur Effizienz- und Effektivitätssteigerung}
-\section{Zusammenfassung und Fazit}
-% Erkenntnisse und Ergebnisse. Antwort auf gestellte Frage.
-% Ausblick?
-\newpage
-% ---------------
+\subsection{Effizienzanalysen im öffentlichen Verkehr (Daraio et al.)}
+\subsubsection{Ökonomische Indikatoren und Umweltziele}
+\subsubsection{Datenbasierte Optimierung: DEA, SFA, Translog-Modelle}
+\subsection{Flussprognosen und dynamische Fahrplansteuerung}
+\subsubsection{Rolling Horizon Optimization (Luo et al.)}
+\subsubsection{Pattern Mining aus Verkehrsdaten}
+\subsection{Erweiterte Entwicklungen: Vernetzte und autonome Fahrzeuge (CAVs)}
+\subsubsection{Rolle von Connected and Automated Vehicles (nach Guo et al. )}
+\subsubsection{Möglichkeiten durch V2V- und V2I-Kommunikation}
+\subsubsection{Verbesserte Ampelsteuerung und Fahrpläne}
+\subsubsection{Herausforderungen bei der Integration von CAVs in bestehende Systeme}
 
-% Section-Überschriften werden automatisch in GROSSBUCHSTABEN gesetzt
-% \section{Einleitung}\label{einleitung}
+%=================================================================================
+\pagebreak
+\section{Herausforderungen und offene Forschungsfragen}
 
-Die Geschichte der Gummi\-bär\-chen ist voller                       % \- Trennhilfe 
-Über\-raschun\-gen. Schon 1922 wurden diese Tierchen erstmals\ldots\ % \ldots macht ...
-Siehe insbesondere die Standardwerke von Jung und Alt~\cite{DEMO9999,DEMO9999}.
+\subsection{Technische Herausforderungen}
+\subsubsection{Datensicherheit und Datenschutz}
+\subsubsection{Skalierung und Standardisierung}
+\subsection{Organisatorische und gesellschaftliche Herausforderungen}
+\subsubsection{Finanzierung}
+\subsubsection{Nutzerakzeptanz}
+\subsection{Offene Forschungsthemen}
+\subsubsection{Robustere KI-Modelle für Verkehrssteuerung}
+\subsubsection{Integration dezentraler Sensornetze}
 
-Zwei Jahre nach der Firmengründung erfand
-Hans Riegel den Vorläufer der Goldbären, damals noch „Tanz\-bären“ genannt.
-Diese waren allerdings nicht nur größer als die heutigen Gummibärchen,
-sondern auch weicher, da zu seiner Herstellung statt der heute üblichen
-Gelatine noch \emph{Gummi arabicum} verwendet wurde.
-Inzwischen werden Gummibären in vielen Variationen von anderen Herstellern angeboten~\cite{DEMO9999}.
-
-1925 begann Haribo mit der Herstellung von Lakritz\-produkten.
-Anfang der 1930er Jahre entstanden die Vertriebsorganisation in Deutschland
-und der Hauptbau der neuen Fabrikationsanlage. 1935 wurde in Kopenhagen\ldots
-
-% Jede Section am besten mit einem Kommentar hier im Quelltext markieren
-% \section{Und Erwachsene ebenso?}
-
-Das ist die Frage, die seit dem
-21.~Jahrhundert aufgeworfen wurde~\cite[S.~237f]{DEMO9999}.
-
-% \subsection{Konsumentenalter}\label{alt}
-Meist wurde implizit angenommen, dass Kinder die Hauptzielgruppe sind.
-Diese Auffassung lässt sich allerdings nicht mehr aufrecht halten~\cite{DEMO9999}.
-
-% \subsection{Varianten}\label{var}
-Weitere Varianten sind Gummibären auf Fruchtsaftbasis (mit dem Zusatz „Frucht“ deklariert), die Haribo 2009 auf den Markt brachte. Fruchtsaft wird bereits seit 1989 auch zum Färben verwendet.
-In \cref{niko} sehen wir ein Beispiel.
-
-\begin{figure}
-\begin{center}
-\unitlength8mm % hier skalieren, falls gewünscht
-\begin{picture}(4,6)
-%außen
-\put(0,0){\line(1,0){4}}
-\put(4,0){\line(0,1){4}}
-\put(4,4){\line(-1,1){2}}
-\put(2,6){\line(-1,-1){2}}
-\put(0,4){\line(0,-1){4}}
-%innen
-\put(0,0){\line(1,1){4}}
-\put(4,4){\line(-1,0){4}}
-\put(0,4){\line(1,-1){4}}
-\end{picture}
-\end{center}
-\caption{Das Haus des Nikolaus als Graph in seiner ersten, ursprünglichen Form,
-         siehe auch~\protect\cite[S.~93]{DEMO9999}. Erwähnenswert ist insbesondere,
-         dass die Figur gezeichnet werden kann, ohne den Stift abzusetzen, wenn man an
-         der richtigen Stelle (wo?) beginnt.}
-\label{niko}
-\end{figure}
-
-% Eine neue Seite anfangen mit
-%\pagebreak
-
-In \cref{tttabelle} ist das Ganze tabellarisch dargestellt.
-
-
-\begin{table}
-\begin{center}
-\begin{tabular}{|c|c|c|}
-\hline
-Material & Tierart & essbar\\
-\hline
-Gummi & Bär & ja\\
-\hline
-\end{tabular}
-\end{center}
-\caption{Eine Übersicht zu den Fachbegriffen.}
-\label{tttabelle}
-\end{table}
-
-% und schon der letzte Abschnitt
-% \section{Zusammenfassung}
-
-In dieser Abhandlung wurde die Geschichte neu interpretiert.
-Es ergaben sich völlig neuartige Forschungsansätze, dargestellt in \cref{alt} und~\ref{var},
-die so vielfältig sind, dass sich die Auswirkungen gegen\-wärtig %Trennhilfe \-
-kaum abschätzen lassen. Auch Artikel mit vielen Autoren~\cite{DEMO9999}
-befassen sich mit diesem Thema.
-
+%=================================================================================
+\pagebreak
+\section{Fazit}
+\subsection{Zusammenfassung der wichtigsten Erkenntnisse}
+\subsection{Bedeutung intelligenter Transportsysteme für nachhaltige Mobilität}
 
 \bibliographystyle{abbrv}
 \bibliography{literatur} % Daten aus der Datei literatur.bib verwenden.
