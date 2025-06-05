@@ -1,0 +1,41 @@
+\section{Grundlagen}
+\subsection{Relevante Fachbegriffe} % Alternativ: Grundbegriffe; zentrale Begriffe; zentrale Konzepte
+\subsubsection{Internet of Things}
+%  (Gubbi et al)
+
+Das Internet of Things (IoT), auf Deutsch auch als "Internet der Dinge" bezeichnet, beschreibt das Konzept, dass eine zunehmende Menge physischer Objekte und Geräte miteinander vernetzt werden.
+% TODO(Luca): Wie an dieser Stelle mit dem englischen Begriff umgehen? Übersetzung nennen oder weglassen?
+Im Bereich des öffentlichen Personennahverkehrs könnten dies beispielsweise Busse sein, die ihren Standort teilen und dadurch Vorhersagen an digitalen Anzeigetafeln zur erwarteten Ankunft des Fahrzeugs an dieser Haltestelle ermöglichen oder dem Leitstand eine Übersicht über die aktuellen Standorte der Busse ermöglicht.
+Durch das Vernetzen der Vielzahl an Geräten wird eine Infrastruktur geschaffen, die die physische Welt beobachtbar und steuerbar macht.
+Auf dieser Grundlage sind neue Anwendungen realisierbar, etwa auch im Bereich der Mobilität.
+
+% TODO(Luca): Demo: Das Internet der Dinge (IoT) beschreibt den Zustand, dass viele Objekte der realen Welt mit dem Internet verbunden sind und dort miteinander kommunizieren können.\cite[S. 1645]{Gubbi2013}
+
+\subsubsection{Intelligent Transportation Systems (ITS) (Elkosantini et al)}
+\subsubsection{Intelligent Public Transportation Systems (IPTS) (Elkosantini et al)}
+\subsection{Systemarchitektur und Komponenten}
+\subsubsection{Sensorik}
+Die Sensorik bildet die Grundlage intelligenter öffentlicher Verkehrssysteme (IPTS), indem sie Daten über Fahrzeuge, Fahrgäste und Infrastruktur erfasst. Typische Technologien sind Infrarotsensoren zur Personenzählung in Bussen, RFID-Tags zur Fahrzeugidentifikation sowie GPS-Module zur Standortverfolgung von Fahrzeugen \cite{Li}. Weiterhin ermöglichen vernetzte Sensoren, wie Accelerometer, CO₂-Sensoren oder Kameras, eine kontinuierliche Überwachung des Verkehrsflusses und der Fahrzeugauslastung \cite{Luo2019}.
+
+\subsubsection{Kommunikation}
+Für die Übertragung der durch Sensoren gesammelten Informationen kommen verschiedene Kommunikationstechnologien zum Einsatz. Dazu zählen GSM/GPRS, WLAN, Vehicle-to-Vehicle (V2V)- und Vehicle-to-Infrastructure (V2I)-Kommunikation. Diese Technologien ermöglichen nicht nur die Echtzeitübermittlung von Standortdaten oder Auslastungsinformationen an Kontrollzentralen und Fahrgastdisplays, sondern auch eine wechselseitige Kommunikation zwischen Fahrzeugen und Ampelanlagen zur Optimierung des Verkehrsflusses \cite{Elkosantini2013} \cite{Guo}.
+
+\subsubsection{Cloud-Integration}
+Die Vielzahl erfasster Daten wird typischerweise in Cloud-Systemen gespeichert und verarbeitet. Eine Cloud-zentrierte Architektur bildet das Rückgrat eines skalierbaren IoT-Systems, indem sie Rechenleistung, Datenspeicherung und Analysewerkzeuge bereitstellt \cite{Gubbi2013}. Die Cloud ermöglicht dabei eine standortunabhängige Verwaltung und Visualisierung von Verkehrs- und Betriebsdaten und dient als Basis für datengestützte Entscheidungssysteme (Decision Support Systems, DSS), wie sie etwa zur dynamischen Fahrplangestaltung genutzt werden \cite{Luo2019}.
+
+\subsubsection{3-Layer-Architektur}
+Die Architektur intelligenter Verkehrssysteme lässt sich in drei funktionale Schichten gliedern, die eng miteinander verknüpft sind und jeweils spezifische Aufgaben übernehmen:
+
+\begin{enumerate}
+    \item Sensing Layer (Erfassungsschicht)
+    \item Network Layer (Vernetzungsschicht)
+    \item Application Layer (Anwendungsschicht)
+\end{enumerate}
+
+Die Erfassungsschicht bildet die physikalische Grundlage des Systems. Hier befinden sich Sensoren wie Infrarotsensoren zur Personenzählung, RFID-Module zur Fahrzeugerkennung sowie GPS-Empfänger zur Standortbestimmung. Diese Sensorik ist typischerweise an Fahrzeugen, Haltestellen und Verkehrsknotenpunkten angebracht und liefert kontinuierlich Daten zu Position, Auslastung und Umgebungsbedingungen.
+
+Die erfassten Daten werden in der Netzwerkschicht weitergeleitet. Hier kommen moderne Kommunikationstechnologien wie GPRS, LTE, WLAN sowie V2V/V2I-Protokolle zum Einsatz. Diese Schicht stellt die Konnektivität zwischen Fahrzeugen, Infrastruktur und zentralen Systemen sicher und ermöglicht so die Echtzeitübertragung von Statusmeldungen, Fahrgastinformationen und Verkehrsdaten.
+
+Die Anwendungsschicht verarbeitet die übermittelten Daten, speichert sie in Cloud-Systemen und stellt sie in aufbereiteter Form zur Verfügung. Hier kommen Analyseplattformen, Entscheidungsunterstützungssysteme (DSS), Fahrgastinformationssysteme sowie Optimierungsalgorithmen zum Einsatz. Sie steuert zum Beispiel LED-Anzeigen an Haltestellen, generiert Sprachausgaben oder passt in Echtzeit Fahrpläne und Ampelschaltungen an.
+
+Durch diese klar strukturierte 3-Layer-Architektur lassen sich die komplexen Anforderungen an ein intelligentes öffentliches Verkehrssystem effizient erfüllen. Jede Schicht ist modular aufgebaut und erlaubt eine schrittweise Weiterentwicklung einzelner Komponenten, ohne das Gesamtsystem zu beeinträchtigen.

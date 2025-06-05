@@ -3,6 +3,8 @@
 \documentclass[ngerman]{seminarbeitrag} % im Format "seminarvorlage" mit Deutsch in neuer Rechtschreibung
 
 \usepackage[utf8]{inputenc} % Kodierung der Non-ASCII-Zeichen
+\usepackage{newunicodechar}
+\newunicodechar{₂}{$_2$}
 
 \begin{document}
 
@@ -27,74 +29,27 @@ TODO werden verschiedene Ansätze zur Optimierung öffentlicher Transportsysteme
 
 %=================================================================================
 \pagebreak
-\section{Einleitung}
-\subsection{Motivation}
-\subsubsection{Urbanisierung}
-\subsubsection{Verkehrsprobleme}
-\subsubsection{Umwelt}
-\subsection{Zielsetzung}
-\subsection{Struktur der Arbeit}
+\include{Einleitung}
 
 %=================================================================================
 \pagebreak
-\section{Grundlagen}
-\subsection{Relevante Fachbegriffe} % Alternativ: Grundbegriffe; zentrale Begriffe; zentrale Konzepte
-\subsubsection{Internet of Things (Gubbi et al)}
-\subsubsection{Intelligent Transportation Systems (ITS) (Elkosantini et al)}
-\subsubsection{Intelligent Public Transportation Systems (IPTS) (Elkosantini et al)}
-\subsection{Systemarchitektur und Komponenten}
-\subsubsection{Sensorik}
-\subsubsection{Kommunikation}
-\subsubsection{Cloud-Integration}
-\subsubsection{3-Layer-Architektur (Luo et al.)}
+\include{Grundlagen}
 
 %=================================================================================
 \pagebreak
-\section{Architektur und Technologien intelligenter öffentlicher Verkehrssysteme}
-\subsection{Erfassung und Analyse von Echtzeitdaten}
-\subsubsection{Fahrzeug-Tracking (GPS, AVLS)} 
-\subsubsection{Fahrgastzählung (APC, z.B. Infrarot-Technologie bei Li, Systeme wie SUICA, PASMO, Oyster, etc.)}
-\subsection{Kommunikationstechnologien}
-\subsubsection{Mobilfunk (LTE, GPRS)}
-\subsubsection{WLAN}
-\subsubsection{RFID}
-\subsection{Entscheidungsunterstützung}
-\subsubsection{Decision Support Systems (DSS) für Disposition und Fahrplanoptimierung}
+\include{Architektur}
 
 %=================================================================================
 \pagebreak
-\section{Ansätze zur Effizienz- und Effektivitätssteigerung}
-\subsection{Effizienzanalysen im öffentlichen Verkehr (Daraio et al.)}
-\subsubsection{Ökonomische Indikatoren und Umweltziele}
-\subsubsection{Datenbasierte Optimierung: DEA, SFA, Translog-Modelle}
-\subsection{Flussprognosen und dynamische Fahrplansteuerung}
-\subsubsection{Rolling Horizon Optimization (Luo et al.)}
-\subsubsection{Pattern Mining aus Verkehrsdaten}
-\subsection{Erweiterte Entwicklungen: Vernetzte und autonome Fahrzeuge (CAVs)}
-\subsubsection{Rolle von Connected and Automated Vehicles (nach Guo et al. )}
-\subsubsection{Möglichkeiten durch V2V- und V2I-Kommunikation}
-\subsubsection{Verbesserte Ampelsteuerung und Fahrpläne}
-\subsubsection{Herausforderungen bei der Integration von CAVs in bestehende Systeme}
+\include{Ansätze}
 
 %=================================================================================
 \pagebreak
-\section{Herausforderungen und offene Forschungsfragen}
-
-\subsection{Technische Herausforderungen}
-\subsubsection{Datensicherheit und Datenschutz}
-\subsubsection{Skalierung und Standardisierung}
-\subsection{Organisatorische und gesellschaftliche Herausforderungen}
-\subsubsection{Finanzierung}
-\subsubsection{Nutzerakzeptanz}
-\subsection{Offene Forschungsthemen}
-\subsubsection{Robustere KI-Modelle für Verkehrssteuerung}
-\subsubsection{Integration dezentraler Sensornetze}
+\include{Herausforderungen}
 
 %=================================================================================
 \pagebreak
-\section{Fazit}
-\subsection{Zusammenfassung der wichtigsten Erkenntnisse}
-\subsection{Bedeutung intelligenter Transportsysteme für nachhaltige Mobilität}
+\include{Fazit}
 
 \bibliographystyle{abbrv}
 \bibliography{literatur} % Daten aus der Datei literatur.bib verwenden.
