@@ -1,10 +1,45 @@
 \section{Architektur und Technologien intelligenter öffentlicher Verkehrssysteme}
+
+Moderne öffentliche Verkehrssysteme stützen sich auf eine Vielzahl technischer Komponenten, die eine kontinuierliche Erfassung, Verarbeitung und Nutzung von Daten ermöglichen. Diese Technologien sind essenziell, um dynamisch auf Veränderungen im Verkehrsfluss oder im Fahrgastverhalten zu reagieren, Ressourcen effizient einzusetzen und den Komfort für Nutzerinnen und Nutzer zu verbessern. In diesem Kapitel werden die zentralen Technologien und Architekturen vorgestellt, die die Grundlage intelligenter ÖPNV-Systeme bilden. Dabei liegt der Fokus auf der Erfassung und Analyse von Echtzeitdaten, den verwendeten Kommunikationstechnologien sowie den eingesetzten Entscheidungsunterstützungssystemen.
+
 \subsection{Erfassung und Analyse von Echtzeitdaten}
-\subsubsection{Fahrzeug-Tracking (GPS, AVLS)} 
-\subsubsection{Fahrgastzählung (APC, z.B. Infrarot-Technologie bei Li, Systeme wie SUICA, PASMO, Oyster, etc.)}
+
+Eine der wichtigsten Voraussetzungen für ein intelligentes Verkehrssystem ist die präzise und kontinuierliche Erfassung von Echtzeitdaten. Diese betreffen sowohl den Standort der Fahrzeuge als auch die Zahl und das Verhalten der Fahrgäste. Tracking-Technologien wie GPS gehören zur Standardausstattung moderner Busflotten. Sie ermöglichen die lückenlose Verfolgung der Fahrzeugposition und liefern damit die Grundlage für Echtzeitfahrgastinformationen, Dispositionsentscheidungen sowie datenbasierte Analyseverfahren. GPS ist besonders robust und weltweit einsetzbar, seine Genauigkeit kann jedoch in dicht bebauten urbanen Umgebungen (sog. „urban canyons“) eingeschränkt sein.
+
+Eine Erweiterung stellt das Automatic Vehicle Location System (AVLS) dar, das zusätzlich zu den GPS-Koordinaten weitere Fahrzeuginformationen wie Geschwindigkeit, Haltestellenverhalten oder Verspätungen in das System einspeist. AVLS-Systeme sind stärker mit der betrieblichen Leitstelle verknüpft und erlauben dadurch proaktive Eingriffe in den Betrieb, etwa bei Störungen oder Umleitungen. Im Vergleich zu reinem GPS bieten AVLS-Lösungen eine höhere Kontextsensitivität, sind aber in der Anschaffung und Wartung komplexer.
+
+Neben diesen klassischen Methoden werden zunehmend weitere Tracking-Ansätze eingesetzt. Dazu zählen Bluetooth-Beacons, die sich zur Lokalisierung innerhalb von Gebäuden eignen, sowie kamerabasierte Systeme mit automatischer Objekterkennung. Diese ergänzenden Technologien ermöglichen eine feinere Auflösung der Bewegungsdaten, erfordern jedoch höhere Rechenleistung und stellen höhere Anforderungen an Datenschutz und Energieeffizienz.
+
+Auch die Fahrgastzählung ist ein elementarer Bestandteil der Datenerfassung. Automated Passenger Counting (APC)-Systeme nutzen Sensoren an Fahrzeugtüren, um Ein- und Ausstiege automatisch zu erfassen. Häufig kommen Infrarotsensoren zum Einsatz, die durch Lichtstrahlen ermitteln, wie viele Personen ein- oder aussteigen. Die Arbeit von Li et al. zeigt, dass diese Methode besonders anonym, wartungsarm und kosteneffizient ist. Allerdings kann es bei sehr hoher Auslastung zu Zählfehlern kommen, etwa bei gleichzeitigem Betreten und Verlassen des Fahrzeugs.
+
+Alternativ oder ergänzend dazu existieren kamerabasierte APC-Systeme, die durch Bildverarbeitung präzisere Daten liefern können, aber gleichzeitig höhere Anforderungen an Energieversorgung, Datenschutz und Rechenleistung stellen. In kleineren Städten oder bei knappen Budgets stellen Infrarotsysteme eine praktikablere Lösung dar, während in Metropolregionen der präzisere Ansatz per Videoanalyse sinnvoller sein kann.
+
+Eine dritte Form der Fahrgastdatenerhebung erfolgt über kontaktlose Smart-Card-Systeme, wie sie beispielsweise in Japan (Suica, PASMO) oder Großbritannien (Oyster) verwendet werden. Diese Karten werden beim Ein- und teils auch beim Aussteigen an Lesegeräte gehalten, wodurch präzise Informationen über Ein- und Ausstiegsorte sowie Fahrtverläufe gesammelt werden. Der Vorteil liegt in der hohen Genauigkeit und der Möglichkeit zur Verknüpfung mit persönlichen Mobilitätsmustern. Allerdings ist diese Methode auf Systeme mit Zugangskontrolle oder Check-In/Check-Out-Prozesse beschränkt und bietet keine direkte Zählung bei Barzahlung oder Nicht-Nutzung von Smart Cards.
+
+Im Vergleich bieten Infrarot-APC-Systeme eine datenschutzfreundliche Lösung mit geringem Aufwand, während Smart-Card-Daten durch ihre Verknüpfung mit Nutzerverhalten tiefere Einblicke ermöglichen – allerdings mit höherem technischen und organisatorischen Aufwand.
+
 \subsection{Kommunikationstechnologien}
-\subsubsection{Mobilfunk (LTE, GPRS)}
-\subsubsection{WLAN}
-\subsubsection{RFID}
+
+Die gesammelten Daten können ihren Nutzen nur entfalten, wenn sie effizient und zuverlässig übertragen werden. Dabei kommen je nach Anwendungsfall unterschiedliche Kommunikationstechnologien zum Einsatz, die sich in Bandbreite, Energiebedarf, Abdeckung und Kosten deutlich unterscheiden.
+
+LTE (Long Term Evolution) bietet hohe Übertragungsraten und niedrige Latenzen, was es insbesondere für datenintensive Anwendungen wie Videostreaming, umfangreiche Telemetriedaten oder schnelle Reaktionen in Entscheidungsunterstützungssystemen prädestiniert. LTE ist insbesondere in städtischen Gebieten gut ausgebaut, stößt jedoch in ländlichen Regionen oder Tunneln schnell an seine Grenzen.
+
+GPRS (General Packet Radio Service) ist hingegen eine ältere, aber weit verbreitete Mobilfunktechnologie mit geringerer Bandbreite. Aufgrund ihres niedrigen Energieverbrauchs und ihrer hohen Netzabdeckung wird sie insbesondere für IoT-Anwendungen mit geringem Datenaufkommen genutzt. Die Studie von Sacoto-Cabrera et al. zeigt, dass GPRS in Kombination mit dem leichtgewichtigen MQTT-Protokoll eine zuverlässige und kostengünstige Lösung für die Übertragung von Status- und Sensordaten darstellt. GPRS ist somit besonders attraktiv für einfache Geräte oder Regionen mit schwacher LTE-Abdeckung.
+
+WLAN kommt vor allem punktuell an Depots, Haltestellen oder Verkehrsknoten zum Einsatz. Dort ermöglicht es eine schnelle Übertragung großer Datenmengen – etwa für Software-Updates, Video-Downloads oder Batch-Übertragungen. Im Vergleich zu Mobilfunktechnologien ist WLAN lokal beschränkt, bietet aber bei guter Infrastruktur hohe Geschwindigkeit und geringe Betriebskosten. Darüber hinaus kann WLAN auch für Fahrgäste zur Internetnutzung bereitgestellt werden, was gleichzeitig anonyme Mobilitätsmuster über MAC-Adressen ermöglicht – ein Thema mit sowohl datenanalytischem als auch datenschutzrechtlichem Potenzial.
+
+RFID-Technologie (Radio Frequency Identification) wird im ÖPNV hauptsächlich für berührungslose Ticketing-Systeme sowie zur Fahrzeug- oder Haltestellenidentifikation eingesetzt. Im Gegensatz zu GPRS oder LTE handelt es sich hierbei nicht um eine klassische Kommunikationstechnologie im Netzwerksinn, sondern um eine punktuelle, ereignisbasierte Übertragung beim Lesen eines RFID-Tags. Der Vorteil liegt in der schnellen, kontaktlosen Erfassung von Daten – ideal für hohe Fahrgastfrequenzen. Im Vergleich zu GPS oder WLAN bietet RFID keine kontinuierliche Datenverbindung, ist dafür aber äußerst robust, wartungsarm und leicht integrierbar.
+
+Während LTE besonders für datenintensive Echtzeitanwendungen geeignet ist, bietet GPRS eine energiesparende Lösung für einfache Übertragungen. WLAN ergänzt diese Systeme dort, wo lokale Hochleistungsübertragung möglich ist. RFID hingegen fungiert als punktuelle Erfassungstechnologie und bildet die Basis für viele Zugangssysteme.
+
 \subsection{Entscheidungsunterstützung}
-\subsubsection{Decision Support Systems (DSS) für Disposition und Fahrplanoptimierung}
+
+Die wertvollsten Informationen entstehen nicht durch die bloße Erfassung von Daten, sondern durch deren intelligente Auswertung. Hier setzen Entscheidungsunterstützungssysteme (Decision Support Systems, DSS) an, indem sie Echtzeitdaten in betriebliche oder strategische Handlungen übersetzen.
+
+Luo et al. beschreiben in ihrer Arbeit ein dynamisches Optimierungsmodell, das auf Daten wie Fahrzeugposition, Fahrgastaufkommen und Verkehrsfluss basiert. Ziel ist es, durch kontinuierliche Berechnung optimaler Umlaufpläne sowohl die Pünktlichkeit als auch den Komfort zu erhöhen. Solche DSS nutzen Modelle der künstlichen Intelligenz oder heuristische Verfahren, um komplexe Zielkonflikte – wie die Minimierung von Verspätungen bei gleichzeitiger Auslastungsoptimierung – in Echtzeit zu lösen.
+
+Im Vergleich zu klassischen, starren Fahrplänen ermöglichen moderne DSS eine flexible, reaktive Steuerung des Betriebs. Während einfache Systeme nur Informationen visualisieren, können fortgeschrittene DSS eigenständig Maßnahmen vorschlagen oder automatisch umsetzen, etwa Umleitungen bei Störungen oder die Nachsteuerung von Verstärkerbussen bei hohem Fahrgastaufkommen.
+
+Ein zentrales Merkmal leistungsfähiger DSS ist die Integration heterogener Datenquellen – von GPS über APC bis hin zu Smart-Card-Daten. Nur durch die Kombination dieser Informationen entsteht ein ganzheitliches Bild des Netzbetriebs. Al-Omar et al. betonen dabei die Notwendigkeit, Informations- und Kommunikationstechnologien (ICT) so zu verknüpfen, dass nicht nur operative, sondern auch strategische Entscheidungen auf datenbasierter Grundlage getroffen werden können.
+
+Im Vergleich traditioneller Kontrollsysteme liefern moderne DSS deutlich bessere Ergebnisse in Bezug auf Ressourcennutzung, Reaktionsgeschwindigkeit und Fahrgastzufriedenheit. Gleichzeitig steigen jedoch die Anforderungen an Datenqualität, IT-Infrastruktur und algorithmische Kompetenz der Betreiber.
